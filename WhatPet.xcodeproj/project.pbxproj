@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69BE9FACEB2A770A4EA175DD /* Pods_WhatPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58C6BB4C9C240AD3F092719 /* Pods_WhatPet.framework */; };
 		763A3A612263E6E000CFC333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A3A602263E6E000CFC333 /* AppDelegate.swift */; };
-		763A3A632263E6E000CFC333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A3A622263E6E000CFC333 /* ViewController.swift */; };
 		763A3A662263E6E000CFC333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763A3A642263E6E000CFC333 /* Main.storyboard */; };
 		763A3A682263E6E200CFC333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763A3A672263E6E200CFC333 /* Assets.xcassets */; };
 		763A3A6B2263E6E200CFC333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763A3A692263E6E200CFC333 /* LaunchScreen.storyboard */; };
+		763A3A752263E82600CFC333 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A3A742263E82600CFC333 /* VoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03FE1D528F658E3607B4FB97 /* Pods-WhatPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatPet.release.xcconfig"; path = "Target Support Files/Pods-WhatPet/Pods-WhatPet.release.xcconfig"; sourceTree = "<group>"; };
 		763A3A5D2263E6E000CFC333 /* WhatPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		763A3A602263E6E000CFC333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		763A3A622263E6E000CFC333 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		763A3A652263E6E000CFC333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		763A3A672263E6E200CFC333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		763A3A6A2263E6E200CFC333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		763A3A6C2263E6E200CFC333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		763A3A742263E82600CFC333 /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
+		E58C6BB4C9C240AD3F092719 /* Pods_WhatPet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatPet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE8BBBC6007EC0B7F405E87 /* Pods-WhatPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatPet.debug.xcconfig"; path = "Target Support Files/Pods-WhatPet/Pods-WhatPet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69BE9FACEB2A770A4EA175DD /* Pods_WhatPet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				763A3A5F2263E6E000CFC333 /* WhatPet */,
 				763A3A5E2263E6E000CFC333 /* Products */,
+				876D15B24D9219E464655B45 /* Pods */,
+				E7E69EA65238D19604F64FBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +61,47 @@
 		763A3A5F2263E6E000CFC333 /* WhatPet */ = {
 			isa = PBXGroup;
 			children = (
+				763A3A722263E80E00CFC333 /* scene */,
 				763A3A602263E6E000CFC333 /* AppDelegate.swift */,
-				763A3A622263E6E000CFC333 /* ViewController.swift */,
 				763A3A642263E6E000CFC333 /* Main.storyboard */,
 				763A3A672263E6E200CFC333 /* Assets.xcassets */,
 				763A3A692263E6E200CFC333 /* LaunchScreen.storyboard */,
 				763A3A6C2263E6E200CFC333 /* Info.plist */,
 			);
 			path = WhatPet;
+			sourceTree = "<group>";
+		};
+		763A3A722263E80E00CFC333 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				763A3A732263E81400CFC333 /* vote */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		763A3A732263E81400CFC333 /* vote */ = {
+			isa = PBXGroup;
+			children = (
+				763A3A742263E82600CFC333 /* VoteViewController.swift */,
+			);
+			path = vote;
+			sourceTree = "<group>";
+		};
+		876D15B24D9219E464655B45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBE8BBBC6007EC0B7F405E87 /* Pods-WhatPet.debug.xcconfig */,
+				03FE1D528F658E3607B4FB97 /* Pods-WhatPet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E7E69EA65238D19604F64FBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E58C6BB4C9C240AD3F092719 /* Pods_WhatPet.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 763A3A6F2263E6E200CFC333 /* Build configuration list for PBXNativeTarget "WhatPet" */;
 			buildPhases = (
+				9964DE6EFC841E85C8879DB9 /* [CP] Check Pods Manifest.lock */,
 				763A3A592263E6E000CFC333 /* Sources */,
 				763A3A5A2263E6E000CFC333 /* Frameworks */,
 				763A3A5B2263E6E000CFC333 /* Resources */,
+				5ECCD678A3D64CF8167270E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +172,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5ECCD678A3D64CF8167270E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatPet/Pods-WhatPet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DMSwipeCards/DMSwipeCards.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DMSwipeCards.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatPet/Pods-WhatPet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9964DE6EFC841E85C8879DB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatPet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		763A3A592263E6E000CFC333 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				763A3A632263E6E000CFC333 /* ViewController.swift in Sources */,
+				763A3A752263E82600CFC333 /* VoteViewController.swift in Sources */,
 				763A3A612263E6E000CFC333 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +369,7 @@
 		};
 		763A3A702263E6E200CFC333 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBE8BBBC6007EC0B7F405E87 /* Pods-WhatPet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +388,7 @@
 		};
 		763A3A712263E6E200CFC333 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03FE1D528F658E3607B4FB97 /* Pods-WhatPet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
