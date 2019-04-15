@@ -8,6 +8,8 @@
 
 import UIKit
 
+var realm = RealmService.shared
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

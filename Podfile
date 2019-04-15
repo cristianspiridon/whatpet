@@ -7,6 +7,6 @@ target 'WhatPet' do
 
   # Pods for WhatPet
 
-pod 'DMSwipeCards'
+pod 'RealmSwift'
 
 end

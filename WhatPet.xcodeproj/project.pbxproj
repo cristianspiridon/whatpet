@@ -13,6 +13,15 @@
 		763A3A682263E6E200CFC333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763A3A672263E6E200CFC333 /* Assets.xcassets */; };
 		763A3A6B2263E6E200CFC333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763A3A692263E6E200CFC333 /* LaunchScreen.storyboard */; };
 		763A3A752263E82600CFC333 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A3A742263E82600CFC333 /* VoteViewController.swift */; };
+		763A3A772263ED3900CFC333 /* PetCardApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A3A762263ED3900CFC333 /* PetCardApi.swift */; };
+		7656044D2264A0DB008C97ED /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656044B2264A0DB008C97ED /* RealmProvider.swift */; };
+		7656044E2264A0DB008C97ED /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656044C2264A0DB008C97ED /* RealmService.swift */; };
+		765604532264A167008C97ED /* PetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765604522264A167008C97ED /* PetCard.swift */; };
+		765604562264B959008C97ED /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765604552264B959008C97ED /* UIImage+Gif.swift */; };
+		765604592264CDE4008C97ED /* SwipeCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765604582264CDE4008C97ED /* SwipeCardsView.swift */; };
+		7656045B2264CEE5008C97ED /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656045A2264CEE5008C97ED /* SwipeCard.swift */; };
+		766504F322648D6800F8D1CE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766504F222648D6800F8D1CE /* CardView.swift */; };
+		766504F52264941200F8D1CE /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 766504F42264941200F8D1CE /* CardView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		763A3A6A2263E6E200CFC333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		763A3A6C2263E6E200CFC333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		763A3A742263E82600CFC333 /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
+		763A3A762263ED3900CFC333 /* PetCardApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCardApi.swift; sourceTree = "<group>"; };
+		7656044B2264A0DB008C97ED /* RealmProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
+		7656044C2264A0DB008C97ED /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		765604522264A167008C97ED /* PetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCard.swift; sourceTree = "<group>"; };
+		765604552264B959008C97ED /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		765604582264CDE4008C97ED /* SwipeCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardsView.swift; sourceTree = "<group>"; };
+		7656045A2264CEE5008C97ED /* SwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCard.swift; sourceTree = "<group>"; };
+		766504F222648D6800F8D1CE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		766504F42264941200F8D1CE /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		E58C6BB4C9C240AD3F092719 /* Pods_WhatPet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatPet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE8BBBC6007EC0B7F405E87 /* Pods-WhatPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatPet.debug.xcconfig"; path = "Target Support Files/Pods-WhatPet/Pods-WhatPet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +79,8 @@
 		763A3A5F2263E6E000CFC333 /* WhatPet */ = {
 			isa = PBXGroup;
 			children = (
+				765604542264B939008C97ED /* extensions */,
+				766504F822649F8100F8D1CE /* realm */,
 				763A3A722263E80E00CFC333 /* scene */,
 				763A3A602263E6E000CFC333 /* AppDelegate.swift */,
 				763A3A642263E6E000CFC333 /* Main.storyboard */,
@@ -82,9 +102,56 @@
 		763A3A732263E81400CFC333 /* vote */ = {
 			isa = PBXGroup;
 			children = (
+				765604572264CDBA008C97ED /* swipeEngine */,
+				766504F122648CDC00F8D1CE /* cardview */,
 				763A3A742263E82600CFC333 /* VoteViewController.swift */,
+				763A3A762263ED3900CFC333 /* PetCardApi.swift */,
 			);
 			path = vote;
+			sourceTree = "<group>";
+		};
+		7656044F2264A12A008C97ED /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				765604522264A167008C97ED /* PetCard.swift */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		765604542264B939008C97ED /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				765604552264B959008C97ED /* UIImage+Gif.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		765604572264CDBA008C97ED /* swipeEngine */ = {
+			isa = PBXGroup;
+			children = (
+				765604582264CDE4008C97ED /* SwipeCardsView.swift */,
+				7656045A2264CEE5008C97ED /* SwipeCard.swift */,
+			);
+			path = swipeEngine;
+			sourceTree = "<group>";
+		};
+		766504F122648CDC00F8D1CE /* cardview */ = {
+			isa = PBXGroup;
+			children = (
+				766504F222648D6800F8D1CE /* CardView.swift */,
+				766504F42264941200F8D1CE /* CardView.xib */,
+			);
+			path = cardview;
+			sourceTree = "<group>";
+		};
+		766504F822649F8100F8D1CE /* realm */ = {
+			isa = PBXGroup;
+			children = (
+				7656044F2264A12A008C97ED /* objects */,
+				7656044B2264A0DB008C97ED /* RealmProvider.swift */,
+				7656044C2264A0DB008C97ED /* RealmService.swift */,
+			);
+			path = realm;
 			sourceTree = "<group>";
 		};
 		876D15B24D9219E464655B45 /* Pods */ = {
@@ -166,6 +233,7 @@
 			files = (
 				763A3A6B2263E6E200CFC333 /* LaunchScreen.storyboard in Resources */,
 				763A3A682263E6E200CFC333 /* Assets.xcassets in Resources */,
+				766504F52264941200F8D1CE /* CardView.xib in Resources */,
 				763A3A662263E6E000CFC333 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,13 +250,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WhatPet/Pods-WhatPet-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DMSwipeCards/DMSwipeCards.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DMSwipeCards.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -225,7 +295,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				763A3A752263E82600CFC333 /* VoteViewController.swift in Sources */,
+				765604532264A167008C97ED /* PetCard.swift in Sources */,
+				7656044E2264A0DB008C97ED /* RealmService.swift in Sources */,
+				765604592264CDE4008C97ED /* SwipeCardsView.swift in Sources */,
 				763A3A612263E6E000CFC333 /* AppDelegate.swift in Sources */,
+				766504F322648D6800F8D1CE /* CardView.swift in Sources */,
+				763A3A772263ED3900CFC333 /* PetCardApi.swift in Sources */,
+				765604562264B959008C97ED /* UIImage+Gif.swift in Sources */,
+				7656045B2264CEE5008C97ED /* SwipeCard.swift in Sources */,
+				7656044D2264A0DB008C97ED /* RealmProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
