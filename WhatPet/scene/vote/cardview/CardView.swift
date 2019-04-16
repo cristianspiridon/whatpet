@@ -104,7 +104,7 @@ class CardView: UIView {
 
         UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
             
-            self.frame           = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            self.frame           = CGRect(x: 0, y: -140, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             self.layoutIfNeeded()
             
         }) { (completed) in }

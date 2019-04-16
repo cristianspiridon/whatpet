@@ -11,21 +11,20 @@ import UIKit
 class VoteViewController: UIViewController {
 
     private var swipeView: SwipeCardsView<String>!
+    private var segmentControl: SegmentControl!
     
     var v_worker:PetCardApi = PetCardApi()
     
     
     override func viewDidLoad() {
-        
-        print("hello world")
+
         super.viewDidLoad()
         
+        addSegmentControl()
+        addSwipeCardsView()
+    
         v_worker.delegate = self
         v_worker.loadCards(searchLimit: 10, onTop: true)
-        
-        addSwipeCardsView()
-
-        
     }
 
     func addSwipeCardsView() {
@@ -35,7 +34,7 @@ class VoteViewController: UIViewController {
             let topMargin:CGFloat = 210
             let sideMargin:CGFloat = 30
             
-            let containerFrame = CGRect(x: sideMargin, y: topMargin, width: frame.width - sideMargin*2, height: frame.height - topMargin*2)
+            let containerFrame = CGRect(x: sideMargin, y: topMargin - 140, width: frame.width - sideMargin*2, height: frame.height - topMargin*2)
             let cardView:CardView = CardView(frame: containerFrame)
             cardView.id = element
             
@@ -55,7 +54,7 @@ class VoteViewController: UIViewController {
             return label
         }
         
-        let frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        let frame = CGRect(x: 0, y: 140, width: self.view.frame.width, height: self.view.frame.height)
         
         swipeView = SwipeCardsView<String>(frame: frame,
                                              viewGenerator: viewGenerator,
@@ -64,6 +63,13 @@ class VoteViewController: UIViewController {
         swipeView.delegate = self
         self.view.addSubview(swipeView)
         
+    }
+    
+    
+    func addSegmentControl() {
+        
+        segmentControl = SegmentControl(frame: CGRect(x: 50, y: 60, width: UIScreen.main.bounds.width - 100, height: 80))
+        self.view.addSubview(segmentControl)
     }
 
 }
