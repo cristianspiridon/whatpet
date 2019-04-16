@@ -26,6 +26,8 @@
 		7656045B2264CEE5008C97ED /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7656045A2264CEE5008C97ED /* SwipeCard.swift */; };
 		766504F322648D6800F8D1CE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766504F222648D6800F8D1CE /* CardView.swift */; };
 		766504F52264941200F8D1CE /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 766504F42264941200F8D1CE /* CardView.xib */; };
+		76A2542A226684E7006B11E5 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A25429226684E7006B11E5 /* InfoTableViewCell.swift */; };
+		76A2542D2266862A006B11E5 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A2542C2266862A006B11E5 /* InfoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		7656045A2264CEE5008C97ED /* SwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCard.swift; sourceTree = "<group>"; };
 		766504F222648D6800F8D1CE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		766504F42264941200F8D1CE /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		76A25429226684E7006B11E5 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		76A2542C2266862A006B11E5 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		E58C6BB4C9C240AD3F092719 /* Pods_WhatPet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatPet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE8BBBC6007EC0B7F405E87 /* Pods-WhatPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatPet.debug.xcconfig"; path = "Target Support Files/Pods-WhatPet/Pods-WhatPet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +170,7 @@
 		766504F122648CDC00F8D1CE /* cardview */ = {
 			isa = PBXGroup;
 			children = (
+				76A2542B22668614006B11E5 /* tableView */,
 				766504F222648D6800F8D1CE /* CardView.swift */,
 				766504F42264941200F8D1CE /* CardView.xib */,
 			);
@@ -180,6 +185,15 @@
 				7656044C2264A0DB008C97ED /* RealmService.swift */,
 			);
 			path = realm;
+			sourceTree = "<group>";
+		};
+		76A2542B22668614006B11E5 /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				76A25429226684E7006B11E5 /* InfoTableViewCell.swift */,
+				76A2542C2266862A006B11E5 /* InfoCell.xib */,
+			);
+			path = tableView;
 			sourceTree = "<group>";
 		};
 		876D15B24D9219E464655B45 /* Pods */ = {
@@ -260,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				760E93FE2265273F008DEBBF /* SegmentControl.xib in Resources */,
+				76A2542D2266862A006B11E5 /* InfoCell.xib in Resources */,
 				763A3A6B2263E6E200CFC333 /* LaunchScreen.storyboard in Resources */,
 				760E9405226536B9008DEBBF /* dog.json in Resources */,
 				763A3A682263E6E200CFC333 /* Assets.xcassets in Resources */,
@@ -283,6 +298,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-WhatPet/Pods-WhatPet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -290,6 +306,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -334,6 +351,7 @@
 				760E940022652907008DEBBF /* SegmentControl.swift in Sources */,
 				763A3A772263ED3900CFC333 /* PetCardApi.swift in Sources */,
 				765604562264B959008C97ED /* UIImage+Gif.swift in Sources */,
+				76A2542A226684E7006B11E5 /* InfoTableViewCell.swift in Sources */,
 				7656045B2264CEE5008C97ED /* SwipeCard.swift in Sources */,
 				7656044D2264A0DB008C97ED /* RealmProvider.swift in Sources */,
 			);

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="info" rowHeight="131" id="35e-NG-bI6" customClass="InfoTableViewCell" customModule="WhatPet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="35e-NG-bI6" id="dEP-sj-EuZ">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="zyc-CK-zOc">
+                        <rect key="frame" x="10" y="10" width="394" height="54.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvp-8w-TOG">
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.78823529410000004" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="COKER" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJD-Fd-n9S">
+                                <rect key="frame" x="0.0" y="18" width="394" height="36.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zyc-CK-zOc" firstAttribute="leading" secondItem="dEP-sj-EuZ" secondAttribute="leading" constant="10" id="I8n-bd-BdX"/>
+                    <constraint firstItem="zyc-CK-zOc" firstAttribute="top" secondItem="dEP-sj-EuZ" secondAttribute="top" constant="10" id="Ixf-i8-ZhH"/>
+                    <constraint firstAttribute="trailing" secondItem="zyc-CK-zOc" secondAttribute="trailing" constant="10" id="Uns-K9-5xw"/>
+                    <constraint firstAttribute="bottom" secondItem="zyc-CK-zOc" secondAttribute="bottom" constant="10" id="XLv-L3-jgi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="label" destination="kvp-8w-TOG" id="0MP-i7-JZt"/>
+                <outlet property="textview" destination="fJD-Fd-n9S" id="AwV-3B-KUi"/>
+            </connections>
+            <point key="canvasLocation" x="327.536231884058" y="55.245535714285715"/>
+        </tableViewCell>
+    </objects>
+</document>

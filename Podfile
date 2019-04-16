@@ -8,5 +8,6 @@ target 'WhatPet' do
   # Pods for WhatPet
 
 pod 'RealmSwift'
+pod 'SVProgressHUD'
 
 end

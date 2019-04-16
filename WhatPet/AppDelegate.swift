@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 var realm = RealmService.shared
 
@@ -18,6 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        SVProgressHUD.setMaximumDismissTimeInterval(2)
+        SVProgressHUD.setForegroundColor(UIColor.darkGray)
+        SVProgressHUD.setBorderWidth(0)
+        SVProgressHUD.setBackgroundColor(UIColor.init(red: 15, green: 201, blue: 202, alpha: 1))
+        
         return true
     }
 

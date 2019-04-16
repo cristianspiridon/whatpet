@@ -51,6 +51,7 @@ class Breeds:Object, Decodable {
     dynamic var bred_for:String?
     dynamic var life_span:String?
     dynamic var temperament:String?
+    dynamic var descr:String?
     
     override static func primaryKey() -> String? {
         return "id"
@@ -62,5 +63,6 @@ class Breeds:Object, Decodable {
         case bred_for
         case life_span
         case temperament
+        case descr = "description"
     }
 }
