@@ -99,13 +99,13 @@ class CardView: UIView {
         breeds = moreInfo
        
         if let value = breeds?.name {
-            infoKeyPairs.append(KeyInfo(key: "Name", value: value))
+            infoKeyPairs.append(KeyInfo(key: "NAME", value: value))
         }
         if let value = breeds?.descr {
-            infoKeyPairs.append(KeyInfo(key: "Description", value: value))
+            infoKeyPairs.append(KeyInfo(key: "DESCRIPTION", value: value))
         }
         if let value = breeds?.bred_for {
-            infoKeyPairs.append(KeyInfo(key: "Bred for", value: value))
+            infoKeyPairs.append(KeyInfo(key: "BRED FOR", value: value))
         }
         if let value = breeds?.temperament {
             infoKeyPairs.append(KeyInfo(key: "TEMPERAMENT", value: value))

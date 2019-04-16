@@ -8,12 +8,12 @@
 
 import UIKit
 
-class VoteViewController: UIViewController {
+class VoteViewController: UIViewController, SegmentControlDelegate {
 
     private var swipeView: SwipeCardsView<String>!
     private var segmentControl: SegmentControl!
     
-    var v_worker:PetCardApi = PetCardApi()
+    var apiWorker:PetCardApi = PetCardApi()
     
     
     override func viewDidLoad() {
@@ -23,9 +23,23 @@ class VoteViewController: UIViewController {
         addSegmentControl()
         addSwipeCardsView()
     
-        v_worker.delegate = self
-        v_worker.loadCards(searchLimit: 10, onTop: true)
+        apiWorker.delegate = self
+        segmentControl.animate(0)
+        
     }
+    
+    func addSegmentControl() {
+        segmentControl = SegmentControl(frame: CGRect(x: 50, y: 60, width: UIScreen.main.bounds.width - 100, height: 80))
+        segmentControl.delegate = self
+        self.view.addSubview(segmentControl)
+    }
+    
+    func onSegmentControlChange(mode: BreedMode) {
+        swipeView.removeAllCards()
+        apiWorker.currentMode = mode
+        apiWorker.loadCards(searchLimit: 10, onTop: true, showSpinner: true)
+    }
+    
 
     func addSwipeCardsView() {
         
@@ -64,13 +78,6 @@ class VoteViewController: UIViewController {
         self.view.addSubview(swipeView)
         
     }
-    
-    
-    func addSegmentControl() {
-        
-        segmentControl = SegmentControl(frame: CGRect(x: 50, y: 60, width: UIScreen.main.bounds.width - 100, height: 80))
-        self.view.addSubview(segmentControl)
-    }
 
 }
 
@@ -84,11 +91,11 @@ extension VoteViewController: VoteAPIProtocol {
 extension VoteViewController: SwipeCardsViewDelegate {
     
     func swipedLeft(_ object: Any) {
-        v_worker.loadCards(searchLimit: 1, onTop: false)
+        apiWorker.loadCards(searchLimit: 1, onTop: false)
     }
     
     func swipedRight(_ object: Any) {
-        v_worker.loadCards(searchLimit: 1, onTop: false)
+        apiWorker.loadCards(searchLimit: 1, onTop: false)
     }
 }
 

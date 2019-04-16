@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol SegmentControlDelegate {
+    func onSegmentControlChange(mode:BreedMode)
+}
+
 class SegmentControl: UIView {
+    
+    var delegate:SegmentControlDelegate?
 
     @IBOutlet var containerView: UIView!
     @IBOutlet weak var backView: UIView!
@@ -28,10 +34,13 @@ class SegmentControl: UIView {
     }
     
     func animate(_ newX:CGFloat) {
+        
         frontXConstraint.constant = newX
         UIView.animate(withDuration: 0.35) {
             self.layoutIfNeeded()
         }
+        
+        delegate?.onSegmentControlChange(mode: newX == 0 ? BreedMode.DOG : BreedMode.CAT)
     }
     
     override init(frame: CGRect) {

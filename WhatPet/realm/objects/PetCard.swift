@@ -46,7 +46,6 @@ class PetCard:Object, Decodable {
 
 @objcMembers
 class Breeds:Object, Decodable {
-    dynamic var id:Int = 0
     dynamic var name:String?
     dynamic var bred_for:String?
     dynamic var life_span:String?
@@ -54,11 +53,10 @@ class Breeds:Object, Decodable {
     dynamic var descr:String?
     
     override static func primaryKey() -> String? {
-        return "id"
+        return "name"
     }
     
     private enum CodingKeys: String, CodingKey {
-        case id
         case name
         case bred_for
         case life_span

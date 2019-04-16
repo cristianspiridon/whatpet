@@ -10,8 +10,6 @@
 		69BE9FACEB2A770A4EA175DD /* Pods_WhatPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58C6BB4C9C240AD3F092719 /* Pods_WhatPet.framework */; };
 		760E93FE2265273F008DEBBF /* SegmentControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760E93FD2265273F008DEBBF /* SegmentControl.xib */; };
 		760E940022652907008DEBBF /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760E93FF22652907008DEBBF /* SegmentControl.swift */; };
-		760E9405226536B9008DEBBF /* dog.json in Resources */ = {isa = PBXBuildFile; fileRef = 760E9403226536B9008DEBBF /* dog.json */; };
-		760E9407226541BA008DEBBF /* cat.json in Resources */ = {isa = PBXBuildFile; fileRef = 760E9406226541BA008DEBBF /* cat.json */; };
 		763A3A612263E6E000CFC333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A3A602263E6E000CFC333 /* AppDelegate.swift */; };
 		763A3A662263E6E000CFC333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763A3A642263E6E000CFC333 /* Main.storyboard */; };
 		763A3A682263E6E200CFC333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763A3A672263E6E200CFC333 /* Assets.xcassets */; };
@@ -34,8 +32,6 @@
 		03FE1D528F658E3607B4FB97 /* Pods-WhatPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatPet.release.xcconfig"; path = "Target Support Files/Pods-WhatPet/Pods-WhatPet.release.xcconfig"; sourceTree = "<group>"; };
 		760E93FD2265273F008DEBBF /* SegmentControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentControl.xib; sourceTree = "<group>"; };
 		760E93FF22652907008DEBBF /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
-		760E9403226536B9008DEBBF /* dog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog.json; sourceTree = "<group>"; };
-		760E9406226541BA008DEBBF /* cat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat.json; sourceTree = "<group>"; };
 		763A3A5D2263E6E000CFC333 /* WhatPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		763A3A602263E6E000CFC333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		763A3A652263E6E000CFC333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,20 +69,10 @@
 		760E93FC2265272A008DEBBF /* segmentcontrolview */ = {
 			isa = PBXGroup;
 			children = (
-				760E94012265367C008DEBBF /* lottie-animations */,
 				760E93FD2265273F008DEBBF /* SegmentControl.xib */,
 				760E93FF22652907008DEBBF /* SegmentControl.swift */,
 			);
 			path = segmentcontrolview;
-			sourceTree = "<group>";
-		};
-		760E94012265367C008DEBBF /* lottie-animations */ = {
-			isa = PBXGroup;
-			children = (
-				760E9406226541BA008DEBBF /* cat.json */,
-				760E9403226536B9008DEBBF /* dog.json */,
-			);
-			path = "lottie-animations";
 			sourceTree = "<group>";
 		};
 		763A3A542263E6E000CFC333 = {
@@ -276,9 +262,7 @@
 				760E93FE2265273F008DEBBF /* SegmentControl.xib in Resources */,
 				76A2542D2266862A006B11E5 /* InfoCell.xib in Resources */,
 				763A3A6B2263E6E200CFC333 /* LaunchScreen.storyboard in Resources */,
-				760E9405226536B9008DEBBF /* dog.json in Resources */,
 				763A3A682263E6E200CFC333 /* Assets.xcassets in Resources */,
-				760E9407226541BA008DEBBF /* cat.json in Resources */,
 				766504F52264941200F8D1CE /* CardView.xib in Resources */,
 				763A3A662263E6E000CFC333 /* Main.storyboard in Resources */,
 			);

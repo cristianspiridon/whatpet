@@ -88,15 +88,14 @@ public class SwipeCardsView<Element>: UIView {
         }
     }
     
-    func swipeTopCardRight() {
-        // TODO: not yet supported
-        fatalError("Not yet supported")
+    func removeAllCards() {
+        for card in loadedCards {
+            card.removeFromSuperview()
+        }
+        loadedCards = []
+        allCards = []
     }
     
-    func swipeTopCardLeft() {
-        // TODO: not yet supported
-        fatalError("Not yet supported")
-    }
 }
 
 extension SwipeCardsView: SwipeCardDelegate {
