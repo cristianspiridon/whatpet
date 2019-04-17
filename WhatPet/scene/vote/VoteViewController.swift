@@ -58,7 +58,7 @@ class VoteViewController: UIViewController, SegmentControlDelegate {
         let overlayGenerator: (SwipeMode, CGRect) -> (UIView) = { (mode: SwipeMode, frame: CGRect) -> (UIView) in
             let label = UILabel()
             label.frame.size = CGSize(width: 100, height: 100)
-            label.center = CGPoint(x: frame.width / 2, y: frame.height / 2)
+            label.center = CGPoint(x: frame.width / 2, y: frame.height / 2 - 140)
             label.layer.cornerRadius = label.frame.width / 2
             label.backgroundColor = mode == .left ? UIColor.red : UIColor.green
             label.clipsToBounds = true
