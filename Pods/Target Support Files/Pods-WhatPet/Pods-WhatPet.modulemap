@@ -1,0 +1,6 @@
+framework module Pods_WhatPet {
+  umbrella header "Pods-WhatPet-umbrella.h"
+
+  export *
+  module * { export * }
+}
